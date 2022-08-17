@@ -1,7 +1,7 @@
 {
-  "name": "rhaissa-business",
+  "name": "rhaissabusiness",
   "version": "0.1.0",
-  "homepage": "https://MarcosRidley.github.io/CooperAutoMinas",
+  "homepage":"https://coop-auto-minas.vercel.app/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.0",
@@ -20,8 +20,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

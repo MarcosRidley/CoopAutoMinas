@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import SignIn from './pages/Login';
 import Main from './pages/Main';
+import SignIn from './pages/Login';
 
 
 function App() {
