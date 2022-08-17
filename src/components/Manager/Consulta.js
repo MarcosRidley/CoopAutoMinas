@@ -162,6 +162,7 @@ export default function Consulta() {
 								onChange={(event) => setRenavan(event.target.value)}
 							/>
 						)}
+						{notFound && <p>Nenhum resultado encontrado</p>}
 						{requiredField() && (
 							<Button
 								type="button"
