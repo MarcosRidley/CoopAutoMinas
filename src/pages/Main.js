@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Dashboard from '../components/Dashboard/Dashboard';
 
 export default function Main() {
+  const [authorized, setAuthorized] = React.useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -17,7 +18,9 @@ export default function Main() {
       .then(res => {
         if(res.authorized !== true) {
           throw new Error('Not Authorized');
-        } 
+        } else {
+          setAuthorized(true);
+        }
       })
       .catch(() => {
         localStorage.removeItem('token');
@@ -25,6 +28,8 @@ export default function Main() {
       });
   }, [navigate]);
   return (
-    <Dashboard />
+    <div>
+      {authorized ? <Dashboard /> : <h3>Autorização recusada! Redirecionando para página de login</h3>}
+    </div>
   )
 }
