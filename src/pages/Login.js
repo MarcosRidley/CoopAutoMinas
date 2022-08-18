@@ -64,7 +64,7 @@ export default function SignIn(props) {
         >
           <img src={emblem} alt="Logo" style={{"width": "200px"}} />
           <Typography component="h1" variant="h6">
-            Sistema de gerenciamento de associados
+            Sistema de gerenciamento de agregados
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             {isWrong && (<p style={{"fontSize":"1.5em", "color": "red" }}>Usuário ou senha incorretos! </p>)}
