@@ -1,4 +1,5 @@
 import * as React from 'react';
+import emblem from '../images/MGCOOP.svg';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -61,10 +62,9 @@ export default function SignIn(props) {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-          </Avatar>
-          <Typography component="h1" variant="h5">
-            MGCOOP
+          <img src={emblem} alt="Logo" style={{"width": "200px"}} />
+          <Typography component="h1" variant="h6">
+            Sistema de gerenciamento de associados
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             {isWrong && (<p style={{"fontSize":"1.5em", "color": "red" }}>Usuário ou senha incorretos! </p>)}
@@ -92,6 +92,7 @@ export default function SignIn(props) {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+              color="success"
             >
               { isLoading ? 'Carregando...' : 'Entrar' }
             </Button>

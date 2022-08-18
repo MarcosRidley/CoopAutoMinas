@@ -17,6 +17,8 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import Cadastro from '../Manager/Cadastro';
 import Consulta from '../Manager/Consulta';
 import Item from './ListItem';
+import Welcome from './Welcome';
+import emblem from '../../images/MGCOOP.svg';
 
 
 
@@ -81,7 +83,7 @@ function DashboardContent() {
     } else if(contentType === 'cadastros') {
        return (<Cadastro />);
     }
-    return (<p>Bem vindo!</p>);
+    return (<Welcome />);
   }
 
   const optionButtons = [
@@ -112,6 +114,7 @@ function DashboardContent() {
             >
               <MenuIcon />
             </IconButton>
+            <img src={emblem} alt='emblema MGCOOP' style={{ width: "5em"}} />
             <Typography
               component="h1"
               variant="h6"

@@ -29,7 +29,7 @@ export default function Main() {
   }, [navigate]);
   return (
     <div>
-      {authorized ? <Dashboard /> : <h3>Autorização recusada! Redirecionando para página de login</h3>}
+      {authorized ? <Dashboard /> : <h3>Aguardando autorização...</h3>}
     </div>
   )
 }
